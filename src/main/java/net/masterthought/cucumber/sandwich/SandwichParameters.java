@@ -11,7 +11,7 @@ public class SandwichParameters {
     private String outDir;
 
     @Parameter(names = "-noServer", required = false, description = "Run and check folders once without starting a server")
-    private boolean noServer;
+    private String noServer;
 
     public String getFolder(){
         return folder;
@@ -21,6 +21,6 @@ public class SandwichParameters {
         return outDir;
     }
 
-    public boolean getServerOption() { return noServer; }
+    public boolean getServerOption() { return noServer.equals("true"); }
 
 }
