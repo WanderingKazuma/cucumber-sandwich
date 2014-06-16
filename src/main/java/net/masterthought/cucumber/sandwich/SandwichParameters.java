@@ -10,6 +10,9 @@ public class SandwichParameters {
     @Parameter(names = "-o", required = true, description = "Output directory to generate the cucumber-html-reports into")
     private String outDir;
 
+    @Parameter(names = "-noServer", required = false, description = "Run and check folders once without starting a server")
+    private boolean noServer;
+
     public String getFolder(){
         return folder;
     }
@@ -17,5 +20,7 @@ public class SandwichParameters {
     public String getOutDir(){
         return outDir;
     }
+
+    public boolean getServerOption() { return noServer; }
 
 }
